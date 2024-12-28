@@ -11,11 +11,16 @@ export class NegociacaoContoller {
     this.inputValor = document.getElementById("valor");
   }
 
-  adiciona() {
+  adiciona(): void {
+    const negociacao = this.criaNegociacao();
+    console.log(negociacao);
+  }
+
+  criaNegociacao(): Negociacao {
     const exp = /-/g;
     const data = new Date(this.inputData.value.replace(exp, ","));
     const quantidade = parseInt(this.inputQuantidade.value);
     const valor = parseFloat(this.inputValor.value);
-    const negociacao = new Negociacao(data, quantidade, valor);
+    return new Negociacao(data, quantidade, valor);
   }
 }
