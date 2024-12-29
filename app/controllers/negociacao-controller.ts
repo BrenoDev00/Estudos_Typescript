@@ -6,14 +6,15 @@ export class NegociacaoContoller {
   private inputValor: HTMLInputElement;
 
   constructor() {
-    this.inputData = document.getElementById("data");
-    this.inputQuantidade = document.getElementById("quantidade");
-    this.inputValor = document.getElementById("valor");
+    this.inputData = document.querySelector("#data");
+    this.inputQuantidade = document.querySelector("#quantidade");
+    this.inputValor = document.querySelector("#valor");
   }
 
   adiciona(): void {
     const negociacao = this.criaNegociacao();
     console.log(negociacao);
+    this.limpaFormulario();
   }
 
   criaNegociacao(): Negociacao {
@@ -22,5 +23,11 @@ export class NegociacaoContoller {
     const quantidade = parseInt(this.inputQuantidade.value);
     const valor = parseFloat(this.inputValor.value);
     return new Negociacao(data, quantidade, valor);
+  }
+
+  limpaFormulario(): void {
+    this.inputData.value = "";
+    this.inputQuantidade.value = "";
+    this.inputValor.value = "";
   }
 }
