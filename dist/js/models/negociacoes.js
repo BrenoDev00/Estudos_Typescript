@@ -5,5 +5,7 @@ export class Negociacoes {
     adicionaNegociacao(Negociacao) {
         this.negociacoes.push(Negociacao);
     }
+    listaNegociacao() {
+        return [...this.negociacoes];
+    }
 }
-const negociacoes = new Negociacoes();
