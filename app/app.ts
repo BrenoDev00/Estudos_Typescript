@@ -9,6 +9,3 @@ form.addEventListener("submit", (event) => {
   controller.adiciona();
   controller.limpaFormulario();
 });
-
-const negociacoesView = new NegociacoesView("#negociacoes-view");
-const template = negociacoesView.template();
