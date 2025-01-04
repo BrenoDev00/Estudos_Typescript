@@ -1,6 +1,7 @@
 import { Negociacoes } from "../models/negociacoes.js";
+import { View } from "./view.js";
 
-export class NegociacoesView {
+export class NegociacoesView extends View{
   private elemento: HTMLElement;
 
   constructor(seletor: string) {
