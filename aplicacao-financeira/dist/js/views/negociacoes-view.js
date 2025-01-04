@@ -13,11 +13,12 @@ export class NegociacoesView {
                 </tr>
             </thead>
             <tbody>
-                ${model.lista().map(negociacao => {
+                ${model
+            .lista()
+            .map((negociacao) => {
             return `
                         <tr>
-                            <td>${new Intl.DateTimeFormat()
-                .format(negociacao.data)}
+                            <td>${new Intl.DateTimeFormat().format(negociacao.data)}
                             </td>
                             <td>
                                 ${negociacao.quantidade}
@@ -27,14 +28,14 @@ export class NegociacoesView {
                             </td>
                         </tr>
                     `;
-        }).join('')}
+        })
+            .join("")}
             </tbody>
         </table>
         `;
     }
     update(model) {
         const template = this.template(model);
-        console.log(template);
         this.elemento.innerHTML = template;
     }
 }
