@@ -1,0 +1,14 @@
+{
+  "name": "to_do",
+  "version": "1.0.0",
+  "description": "lista de tarefas com typescript",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --watch"
+  },
+  "author": "Breno",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
