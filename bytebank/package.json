@@ -1,0 +1,14 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "sistema de banco orientado a objetos com TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --watch"
+  },
+  "author": "Breno",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}
