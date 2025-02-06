@@ -1,0 +1,10 @@
+{
+  "name": "pratica",
+  "version": "1.0.0",
+  "description": "estudos typescript",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc --watch"
+  },
+  "author": "Breno"
+}
