@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "module": "ES2015",
     "strictNullChecks": true,
     "noEmitOnError": true,
     "noImplicitAny": true,
-    "outDir": "app"
+    "outDir": "dist"
   },
-  "include": ["app/**/*"]
+  "rootDir": ["app/**/*.ts"]
 }

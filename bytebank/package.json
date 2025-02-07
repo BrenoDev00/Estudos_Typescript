@@ -4,11 +4,13 @@
   "description": "sistema de banco orientado a objetos com TypeScript",
   "main": "index.js",
   "scripts": {
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "start": "node dist/index.js"
   },
   "author": "Breno",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.7.3"
-  }
+  },
+  "type": "module"
 }
