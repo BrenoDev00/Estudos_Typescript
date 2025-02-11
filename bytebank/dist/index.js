@@ -24,4 +24,5 @@ console.log("saldo Eliane: ", elianeCheckingAccount.checkBalance());
 var elianeSavingsAccount = new SavingsAccount(Eliane, 768, 23);
 console.log(elianeSavingsAccount.checkBalance());
 elianeSavingsAccount.withdrawAmmount(3);
-console.log(elianeSavingsAccount.checkBalance());
+console.log("saldo Eliane: ", elianeSavingsAccount.checkBalance());
+console.log("saldo Breno: ", brenoCheckingAccount.checkBalance());

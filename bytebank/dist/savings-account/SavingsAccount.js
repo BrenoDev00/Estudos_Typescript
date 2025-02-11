@@ -19,10 +19,6 @@ var SavingsAccount = /** @class */ (function (_super) {
     function SavingsAccount(client, branch, balance) {
         return _super.call(this, client, branch, balance) || this;
     }
-    SavingsAccount.prototype.withdrawAmmount = function (value) {
-        if (this.balance >= value)
-            return (this.balance -= value);
-    };
     return SavingsAccount;
 }(Account));
 export { SavingsAccount };
