@@ -1,32 +1,17 @@
+import { Account } from "../account/Account.js";
 import { ClientInterface } from "../types/client.type";
 
-export class CheckingAccount {
-  client: ClientInterface;
-  branch: number;
-  private balance: number = 0;
-
+export class CheckingAccount extends Account {
   constructor(client: ClientInterface, branch: number) {
-    this.client = client;
-    this.branch = branch;
-  }
-
-  depositAmmount(value: number) {
-    if (value > 0) return (this.balance += value);
+    super(client, branch, 0);
   }
 
   withdrawAmmount(value: number) {
-    if (value <= this.balance) return (this.balance -= value);
-  }
+    const fee = 1.1;
 
-  transferAmmount(value: number, account: CheckingAccount) {
-    const transferredAmmount = this.withdrawAmmount(value);
+    const transferredAmmount = value * fee;
 
-    if (transferredAmmount !== undefined) {
-      return account.depositAmmount(transferredAmmount);
-    }
-  }
-
-  checkBalance() {
-    return this.balance;
+    if (transferredAmmount <= this.balance)
+      return (this.balance -= transferredAmmount);
   }
 }
