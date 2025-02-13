@@ -17,7 +17,7 @@ import { Employee } from "./Employee.js";
 var Director = /** @class */ (function (_super) {
     __extends(Director, _super);
     function Director(name, cpf, salary) {
-        return _super.call(this, name, cpf, salary) || this;
+        return _super.call(this, name, cpf, salary, 2) || this;
     }
     return Director;
 }(Employee));
