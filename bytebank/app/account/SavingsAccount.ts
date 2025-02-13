@@ -1,4 +1,4 @@
-import { Account } from "../account/Account.js";
+import { Account } from "./Account.js";
 import { ClientInterface } from "../types/client.type.js";
 
 export class SavingsAccount extends Account {

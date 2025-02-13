@@ -1,13 +1,13 @@
-import { Account } from "../account/Account.js";
-import { ClientInterface } from "../types/client.type";
+import { ClientInterface } from "../types/client.type.js";
+import { Account } from "./Account.js";
 
-export class CheckingAccount extends Account {
+export class PayrollAccount extends Account {
   constructor(client: ClientInterface, branch: number) {
     super(client, branch, 0);
   }
 
   withdrawAmmount(value: number) {
-    const fee = 1.1;
+    const fee = 1.02;
 
     const transferredAmmount = value * fee;
 
