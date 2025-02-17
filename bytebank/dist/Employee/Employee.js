@@ -7,6 +7,9 @@ var Employee = /** @class */ (function () {
     Employee.prototype.registerPassword = function (password) {
         this.password = password;
     };
+    Employee.prototype.authenticatePassword = function (password) {
+        return this.password == password;
+    };
     return Employee;
 }());
 export { Employee };

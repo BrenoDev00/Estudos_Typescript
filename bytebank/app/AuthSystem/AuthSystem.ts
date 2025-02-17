@@ -1,7 +1,7 @@
-import { Employee } from "../Employee/Employee.js";
+import { UserType } from "../types/user.type";
 
 export class AuthSystem {
-  static login(Employee: Employee, password: string) {
-    return password == Employee.password;
+  static login(user: UserType, password: string) {
+    return user.authenticatePassword(password);
   }
 }

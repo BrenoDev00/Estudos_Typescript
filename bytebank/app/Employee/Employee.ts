@@ -14,4 +14,8 @@ export abstract class Employee {
   registerPassword(password: string) {
     this.password = password;
   }
+
+  authenticatePassword(password: string) {
+    return this.password == password;
+  }
 }
